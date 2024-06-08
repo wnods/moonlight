@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f7d3e3;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    position: fixed;
+    padding: 5%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid red;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: red }
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    opacity: 0.6;
+    transform: rotate(-45deg);
+    animation: float 5s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.heart:after {
+    left: 10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+#heartAnimation {
+    font-size: 100px; 
+    line-height: 100px;
+    text-align: fixed;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; 
+    height: 100px;
+    cursor: pointer;
+}
+
+body.second-bg {
+    background-image: url('C:\\Users\\Willr\\OneDrive\\Imagens\\euecaca.png'); 
+    background-repeat: repeat;
+    background-size: 450px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .message {
+        font-size: 1.5em;
+    }
+
+    #heartAnimation {
+        font-size: 80px;
+        width: 80px; 
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .message {
+        font-size: 1.2em;
+    }
+
+    #heartAnimation {
+        font-size: 60px;
+        width: 60px; 
+        height: 60px;
+    }
+}
