@@ -13,20 +13,23 @@ body {
 }
 
 .container {
-    position: fixed;
+    position: absolute;
     padding: 5%;
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
     box-sizing: border-box;
+    top: auto
+    
 }
 
 .title {
     font-family: 'Great Vibes', sans-serif;
-    font-size: 2.5em;
+    font-size: 5em;
     margin-bottom: 20px;
+    
 }
 
 .message {
@@ -34,9 +37,11 @@ body {
     font-size: 2em;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 0.15em solid red;
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    border-right: 0.15em solid rgba(255, 0, 0, 0);
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
+
+
 
 @keyframes typing {
     from { width: 0 }
@@ -45,7 +50,7 @@ body {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: red }
+    50% { border-color: rgba(255, 0, 0, 0) }
 }
 
 .heart {
@@ -107,6 +112,7 @@ body {
 
 body.second-bg {
     background-image: url('C:\\Users\\Willr\\OneDrive\\Imagens\\euecaca.png'); 
+    background-blend-mode: multiply;
     background-repeat: repeat;
     background-size: 450px;
 }
@@ -116,6 +122,8 @@ body.second-bg {
     .container {
         padding: 20px;
         width: 90%;
+        top: 50%
+        auto
     }
 
     .title {
@@ -127,7 +135,7 @@ body.second-bg {
     }
 
     #heartAnimation {
-        font-size: 80px;
+        font-size: 100px;
         width: 80px; 
         height: 80px;
     }
@@ -135,7 +143,7 @@ body.second-bg {
 
 @media (max-width: 480px) {
     .container {
-        padding: 10px;
+        padding: 65px;
         width: 95%;
     }
 
@@ -148,8 +156,12 @@ body.second-bg {
     }
 
     #heartAnimation {
-        font-size: 60px;
-        width: 60px; 
-        height: 60px;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        font-size: 100px;
+        width: 200px; 
+        height: 90px;
     }
 }
+
