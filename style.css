@@ -24,14 +24,26 @@ body {
     top: auto
     
 }
-
 .title {
     font-family: 'Great Vibes', sans-serif;
     font-size: 5em;
     margin-bottom: 20px;
-    
+    overflow: hidden; 
+    width: 0; 
 }
 
+.title.animate {
+    animation: write 2s forwards; 
+}
+
+@keyframes write {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
 .message {
     font-family: 'Great Vibes', sans-serif;
     font-size: 2em;
@@ -39,7 +51,33 @@ body {
     overflow: hidden;
     border-right: 0.15em solid rgba(255, 0, 0, 0);
     animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+  }
+  
+  .message.apagar {
+    animation: apagar 2s forwards;
+  }
+  
+  .message.escrever {
+    animation: escrever 2s forwards;
+  }
+  
+  @keyframes apagar {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes escrever {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
 
 
 
@@ -111,7 +149,7 @@ body {
 }
 
 body.second-bg {
-    background-image: url('euecaca.png'); 
+    background-image: url('C:\\Users\\Willr\\OneDrive\\Imagens\\euecaca.png'); 
     background-blend-mode: multiply;
     background-repeat: repeat;
     background-size: 450px;
