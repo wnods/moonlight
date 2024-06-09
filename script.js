@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+const titulo = document.getElementById('titulo');
+const message = document.querySelector('.message');
+
+titulo.classList.add('animate'); 
+
+titulo.addEventListener('animationend', () => {
+    message.classList.add('animate'); 
+});
+
 
 function createHeart() {
     const heart = document.createElement('div');
